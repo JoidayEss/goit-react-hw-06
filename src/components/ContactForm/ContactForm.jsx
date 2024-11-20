@@ -9,6 +9,10 @@ const ContactForm = () => {
   const handleAddContact = (values, { resetForm }) => {
     console.log("Новий контакт", values);
 
+    if (!values.name || values.number) {
+      return alert("Please enter name and number");
+    }
+
     const newContact = {
       id: Date.now(),
       name: values.name,
@@ -17,6 +21,7 @@ const ContactForm = () => {
     dispatch(addContacts(newContact));
     resetForm();
   };
+
   return (
     <Formik
       initialValues={{ name: "", number: "" }}

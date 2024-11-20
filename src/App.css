@@ -4,9 +4,14 @@ ol {
 }
 
 body {
+    background-image: url("./assets//vibrant-pink-watercolor-painting-background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 340px;
+    min-height: 95vh;
     margin: 0 auto;
     line-height: 1.5;
-    max-width: 1280px;
     font-family: monospace;
     padding: 20px;
     display: flex;
